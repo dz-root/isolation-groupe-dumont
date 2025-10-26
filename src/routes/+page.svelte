@@ -12,7 +12,6 @@
 	  statut: null,
 	  codePostal: "",
 	  travaux: [],
-	  chauffage: null,
 	  foyer: null,
 	  revenus: null,
 	  informations: {
@@ -36,12 +35,10 @@
 		case 4:
 		  return data.travaux.length > 0;
 		case 5:
-		  return data.chauffage !== null;
-		case 6:
 		  return data.foyer !== null;
-		case 7:
+		case 6:
 		  return data.revenus !== null;
-		case 8:
+		case 7:
 		  const { nom, prenom, telephone, email } = data.informations;
 		  return nom.trim() && prenom.trim() && telephone.trim() && email.trim();
 		default:
@@ -225,18 +222,7 @@
 						<p class="font-medium mb-2">Dites nous quels travaux vous intéressent ?</p>
 						<p class="italic">Un ou plusieurs choix possibles</p>
 						<ul class="w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg">
-								<li class="w-full border-b border-gray-200 rounded-t-lg ">
-									<div class="flex items-center ps-3">
-										<input id="porte-fenetre" type="checkbox" value="Fenêtre et portes" bind:group={$formData.travaux} class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 rounded focus:ring-green-500 focus:ring-2">
-										<label for="porte-fenetre" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 ">Fenêtre et portes</label>
-									</div>
-								</li>
-								<li class="w-full border-b border-gray-200 rounded-t-lg ">
-									<div class="flex items-center ps-3">
-										<input id="volets-roulants" type="checkbox" value="Volets roulants" bind:group={$formData.travaux} class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 rounded focus:ring-green-500 focus:ring-2">
-										<label for="volets-roulants" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 ">Volets roulants</label>
-									</div>
-								</li>
+			
 								<li class="w-full border-b border-gray-200 rounded-t-lg ">
 									<div class="flex items-center ps-3">
 										<input id="iso-ext" type="checkbox" value="Isolation par l’extérieur (crépi inclus)" bind:group={$formData.travaux} class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 rounded focus:ring-green-500 focus:ring-2">
@@ -267,60 +253,11 @@
 										<label for="iso-planchers" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 ">Isolation des planchers bas</label>
 									</div>
 								</li>
-								<li class="w-full border-b border-gray-200 rounded-t-lg ">
-									<div class="flex items-center ps-3">
-										<input id="chauffage" type="checkbox" value="Chauffage" bind:group={$formData.travaux} class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 rounded focus:ring-green-500 focus:ring-2">
-										<label for="chauffage" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 ">Chauffage</label>
-									</div>
-								</li>
-								<li class="w-full border-b border-gray-200 rounded-t-lg ">
-									<div class="flex items-center ps-3">
-										<input id="eau-chaude" type="checkbox" value="Eau chaude sanitaire" bind:group={$formData.travaux} class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 rounded focus:ring-green-500 focus:ring-2">
-										<label for="eau-chaude" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 ">Eau chaude sanitaire</label>
-									</div>
-								</li>
-								<li class="w-full border-b border-gray-200 rounded-t-lg ">
-									<div class="flex items-center ps-3">
-										<input id="VMC" type="checkbox" value="VMC" bind:group={$formData.travaux} class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 rounded focus:ring-green-500 focus:ring-2">
-										<label for="VMC" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 ">VMC</label>
-									</div>
-								</li>
-								<li class="w-full border-b border-gray-200 rounded-t-lg ">
-									<div class="flex items-center ps-3">
-										<input id="photovoltaiques" type="checkbox" value="Panneaux photovoltaïques" bind:group={$formData.travaux} class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 rounded focus:ring-green-500 focus:ring-2">
-										<label for="photovoltaiques" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 ">Panneaux photovoltaïques</label>
-									</div>
-								</li>
-
-							
 						</ul>
 					</div>
 				{/if}
 			
 				{#if $currentStep === 5}
-					<!-- Étape 5 : Chauffage -->
-					<div class="w-full" transition:fade>
-						<p class="font-medium mb-2">Comment êtes-vous chauffés actuellement ? </p>
-					<label class="block">
-						<input type="radio" name="chauffage" value="Gaz" bind:group={$formData.chauffage} />
-						Gaz
-					</label>
-					<label class="block">
-						<input type="radio" name="chauffage" value="Électricité" bind:group={$formData.chauffage} />
-						Électricité
-					</label>
-					<label class="block">
-						<input type="radio" name="chauffage" value="Fioul" bind:group={$formData.chauffage} />
-						Fioul
-					</label>
-					<label class="block">
-						<input type="radio" name="chauffage" value="Autres" bind:group={$formData.chauffage} />
-						Autres
-					</label>
-					</div>
-				{/if}
-			
-				{#if $currentStep === 6}
 					<!-- Étape 6 : Foyer -->
 					<div class="w-full">
 						<p class="font-medium mb-2">De combien personnes se compose votre foyer?</p>
@@ -351,7 +288,7 @@
 					</div>
 				{/if}
 		  
-				{#if $currentStep === 7}
+				{#if $currentStep === 6}
 				
 					<p>Dans quelle tranche de revenus êtes-vous ?</p>
 					<!-- Étape 7 : Revenus -->
@@ -374,7 +311,7 @@
 					</ul>
 				{/if}
 		  
-				{#if $currentStep === 8}
+				{#if $currentStep === 7}
 					<!-- Étape 8 : Informations personnelles -->
 					<div class="w-full flex flex-col">
 						<label>Nom et prénom</label>
@@ -422,12 +359,12 @@
 					</div>
 				{/if}
 
-				{#if $currentStep === 9}
+				{#if $currentStep === 8}
 					<p class="text-center">Merci, Nous avons bien reçu votre demande. Un technicien interne vous contactera dans les plus brefs délais.</p>
 				{/if}
 	
 				<div class="mt-10 flex gap-2">
-					{#if $currentStep > 1 &&  $currentStep <9}
+					{#if $currentStep > 1 &&  $currentStep <8}
 						<button type="button" class="flex items-center gap-3 bg-white  border px-5 py-1.5 rounded-full hover:bg-gray-100 transition ease-in-out" on:click={prevStep}>
 							<svg class="w-6" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
 								<path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18"></path>
@@ -435,10 +372,10 @@
 							<span class="hidden sm:block">Précédent</span>
 						</button>
 					{/if}
-					{#if $currentStep < 9}
+					{#if $currentStep < 8}
 						<p class="flex items-center text-xs font-bold bg-slate-50 border px-3 rounded-full w-[90px]">Étape {$currentStep}/8</p>
 					{/if}
-					{#if $currentStep < 8}
+					{#if $currentStep < 7}
 						<button type="button" class="flex items-center gap-3 bg-green-500 text-white px-5 py-1.5 rounded-full hover:bg-green-600 transition ease-in-out font-bold" on:click={nextStep}>
 							Suivant
 							<svg class="w-6" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -446,7 +383,7 @@
 							</svg>
 						</button>
 					{/if}
-					{#if $currentStep === 8}
+					{#if $currentStep === 7}
 					  <button type="submit" class="bg-green-500 text-white px-5 py-1.5 rounded-full hover:bg-green-600 font-bold transition ease-in-out" on:click={submitForm}>Soumettre</button>
 					{/if}
 				</div>

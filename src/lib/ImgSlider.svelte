@@ -1,5 +1,5 @@
 <script>
-    export let images = ['./slides/installation-fenetres.png','./slides/isolation-comble.png','./slides/installation-chauf-eau.png','./slides/systeme-chauf.png', './slides/installation_vmc.png', './slides/photovoltaique.png', './slides/dumont-prestations.png']
+    export let images = ['./slides/9.png','./slides/11.png','./slides/13.png','./slides/14.png']
     export let animation=""
     export let duration = 2500
     export let classes = ''

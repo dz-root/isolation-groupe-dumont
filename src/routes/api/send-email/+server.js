@@ -27,7 +27,6 @@ export async function POST({ request }) {
     - Statut : ${data.statut}
     - Code postal : ${data.codePostal}
     - Travaux : ${data.travaux.join(', ')}
-    - Chauffage : ${data.chauffage}
     - Foyer : ${data.foyer}
     - Revenus : ${data.revenus}
     - Nom : ${data.informations.nom}
