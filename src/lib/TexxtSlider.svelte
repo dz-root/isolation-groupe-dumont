@@ -1,0 +1,27 @@
+<script>
+    export let color = 'text-green-500'
+    export let text = ['Fenêtre et portes','Volets roulants','Isolation par l\’extérieur','Isolation par l\’intérieur','Isolation des combles perdues','Isolation des rampants', 'Isolation des planchers bas' , 'Chauffage','Eau chaude sanitaire', 'VMC', 'Panneaux photovoltaïques' ]
+    export let animation = 'animate-bounce'
+    export let duration = 1500
+    let nomMetier = ''
+    let counter = 0
+
+    
+    function change() {
+        nomMetier = text[counter]
+        counter++
+        if(counter >= text.length) { counter = 0; }
+    }
+
+    setInterval(change, duration);
+</script>
+
+<div class="flex justify-center lg:justify-start">
+    <p class="flex items-center justify-center gap-2 bg-white border border-green-300 px-4 rounded-full font-semibold {color} {animation}  transition ease-in-out">
+        <span class="relative flex h-3 w-3">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+        </span>
+        {nomMetier}
+    </p>
+</div>
