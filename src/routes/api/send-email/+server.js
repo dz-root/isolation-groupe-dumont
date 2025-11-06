@@ -4,36 +4,80 @@ dotenv.config();
 
 export async function POST({ request }) {
   const data = await request.json();
+
   const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
     port: process.env.SMTP_PORT,
-    secure: true, // SSL/TLS
+    secure: true,
     auth: {
       user: process.env.SMTP_USER,
       pass: process.env.SMTP_PASS,
-    },  
+    },
     tls: {
-      rejectUnauthorized: false, // Ignore les certificats auto-signés
+      rejectUnauthorized: false,
     },
   });
 
-  // 1- Construire l'e-mail
   const mailOptions = {
-    from: process.env.SMTP_USER, 
-    to: 'subvention@groupedumont.fr',
-    subject: `Nouveau lead ${data.informations.nom}`,
-    text: `Détails du formulaire soumis :
-    - Habitation : ${data.habitation}
-    - Statut : ${data.statut}
-    - Code postal : ${data.codePostal}
-    - Travaux : ${data.travaux.join(', ')}
-    - Foyer : ${data.foyer}
-    - Revenus : ${data.revenus}
-    - Nom : ${data.informations.nom}
-    - Prénom : ${data.informations.prenom}
-    - Téléphone : ${data.informations.telephone}
-    - E-mail : ${data.informations.email}
-    `,
+    from: `"ISOLATION - GROUPE DUMONT" <${process.env.SMTP_USER}>`,
+    to: 'contact@groupedumont.fr',
+    cc: 'subvention@groupedumont.fr',
+    subject: `Nouveau lead ${data.informations.prenom} ${data.informations.nom}`,
+    html: `
+      <h2>Nouveau lead reçu</h2>
+
+      <table style="border-collapse: collapse; width: 100%; max-width: 600px;">
+        <tr>
+          <td style="padding: 6px; font-weight: bold;">Nom :</td>
+          <td style="padding: 6px;">${data.informations.nom}</td>
+        </tr>
+        <tr>
+          <td style="padding: 6px; font-weight: bold;">Prénom :</td>
+          <td style="padding: 6px;">${data.informations.prenom}</td>
+        </tr>
+        <tr>
+          <td style="padding: 6px; font-weight: bold;">Téléphone :</td>
+          <td style="padding: 6px;">${data.informations.telephone}</td>
+        </tr>
+        <tr>
+          <td style="padding: 6px; font-weight: bold;">E-mail :</td>
+          <td style="padding: 6px;">${data.informations.email}</td>
+        </tr>
+        <tr>
+          <td style="padding: 6px; font-weight: bold;">Habitation :</td>
+          <td style="padding: 6px;">${data.habitation}</td>
+        </tr>
+        <tr>
+          <td style="padding: 6px; font-weight: bold;">Statut :</td>
+          <td style="padding: 6px;">${data.statut}</td>
+        </tr>
+        <tr>
+          <td style="padding: 6px; font-weight: bold;">Foyer :</td>
+          <td style="padding: 6px;">${data.foyer} personnes</td>
+        </tr>
+        <tr>
+          <td style="padding: 6px; font-weight: bold;">Revenus Fiscale:</td>
+          <td style="padding: 6px;">${data.revenus}</td>
+        </tr>
+        <tr>
+          <td style="padding: 6px; font-weight: bold;">Energie du Chauffage :</td>
+          <td style="padding: 6px;">${data.chauffage}</td>
+        </tr>
+        <tr>
+          <td style="padding: 6px; font-weight: bold;">Code postal :</td>
+          <td style="padding: 6px;">${data.codePostal}</td>
+        </tr>
+        <tr style="background-color: #f1f1f1;">
+          <td style="padding: 6px; font-weight: bold;">Type de Travaux :</td>
+          <td style="padding: 6px; font-weight: bold;">${data.travaux.join(', ')}</td>
+        </tr>
+
+
+      </table>
+
+      <br />
+      <p style="font-size: 12px; color: #777;">Email envoyé automatiquement depuis le site.</p>
+    `
   };
 
   try {

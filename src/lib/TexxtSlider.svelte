@@ -1,6 +1,6 @@
 <script>
     export let color = 'text-green-500'
-    export let text = ['Fenêtre et portes','Volets roulants','Isolation par l\’extérieur','Isolation par l\’intérieur','Isolation des combles perdues','Isolation des rampants', 'Isolation des planchers bas' , 'Chauffage','Eau chaude sanitaire', 'VMC', 'Panneaux photovoltaïques' ]
+    export let text = ['Isolation par l\’extérieur','Isolation par l\’intérieur','Isolation des combles perdues','Isolation des rampants', 'Isolation des planchers bas', 'Amélioration classe DPE']
     export let animation = 'animate-bounce'
     export let duration = 1500
     let nomMetier = ''

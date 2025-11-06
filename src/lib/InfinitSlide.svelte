@@ -1,29 +1,21 @@
 <div class="scroll bg-green-500" style="--time:120s">
 	<div class="font-bold">
-		<span>Fenêtre et portes</span>
-		<span>Volets roulants</span>
+
 		<span>Isolation par l’extérieur</span>
 		<span>Isolation par l’intérieur</span>
 		<span>Isolation des combles</span>
 		<span>Isolation des rampants</span>
 		<span>Isolation des planchers</span>
-		<span>Chauffage</span>
-		<span>Eau chaude sanitaire</span>
-		<span>VMC</span>
-		<span>Panneaux photovoltaïques</span>
+
 	</div>
 	<div class="font-bold">
-		<span>Fenêtre et portes</span>
-		<span>Volets roulants</span>
+
 		<span>Isolation par l’extérieur</span>
 		<span>Isolation par l’intérieur</span>
 		<span>Isolation des combles</span>
 		<span>Isolation des rampants</span>
 		<span>Isolation des planchers</span>
-		<span>Chauffage</span>
-		<span>Eau chaude sanitaire</span>
-		<span>VMC</span>
-		<span>Panneaux photovoltaïques</span>
+
 	</div>	
 </div>
 
