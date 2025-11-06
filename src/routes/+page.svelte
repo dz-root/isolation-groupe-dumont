@@ -13,9 +13,9 @@
 	<div class="w-full sm:w-11/12 xl:w-10/12 2xl:w-7/12 grid grid-cols-1 lg:grid-cols-2 p-5 gap-3">
 		<div class="flex flex-col gap-5">
 			<TexxtSlider></TexxtSlider>
-			<h2 class="text-center lg:text-left text-3xl md:text-4xl xl:text-6xl font-extrabold">
+			<h1 class="text-center lg:text-left text-3xl md:text-4xl xl:text-6xl font-extrabold">
 				Profitez des <span class="text-green-500 italic">Aides de l'Etat</span> pour vos Travaux d'isolation
-			</h2>
+			</h1>
 			<p class="text-center lg:text-left text-lg sm:text-xl">Savez-vous qu'en isolant entièrement votre maison, vous pouvez réaliser jusqu'à <span class="font-bold underline decoration-green-500 decoration-4 underline-offset-4">70% d'économies </span> d'énergie ?</p>
 			<div class="flex justify-end">
 				<img src="arrow.png" alt="" class="hidden lg:block w-[80px] -mt-10 -mr-10 z-10">
@@ -142,27 +142,27 @@
 	<div class="w-full sm:w-11/12 xl:w-10/12 2xl:w-7/12 grid grid-cols-2 sm:grid-cols-3 gap-3">
 		<div class="flex flex-col justify-center items-center bg-white p-5 shadow-md rounded-xl">
 			<img src="./aides.png" class="w-20" alt="">
-			<p class="text-lg text-center"><span class="font-bold text-green-500">Jusqu'a 80%</span> financer par les aides de l'Etat</p>
+			<p class="text-center sm:mx-5"><span class="font-bold text-green-500">Jusqu'a 80%</span> financer par les aides de l'Etat.</p>
 		</div>
 		<div class="flex flex-col justify-center items-center bg-white p-5 shadow-md rounded-xl">
 			<img src="./valorisation.png" class="w-20" alt="">
-			<p class="text-lg text-center"><span class="font-bold text-green-500">Valorisation</span> de votre logement <span class="font-bold text-green-500">de 15 à 25%</span></p>
+			<p class="text-center sm:mx-5"><span class="font-bold text-green-500">Valorisation</span> de votre logement. <span class="font-bold text-green-500">de 15 à 25%</span></p>
 		</div>
 		<div class="flex flex-col justify-center items-center bg-white p-5 shadow-md rounded-xl">
 			<img src="./economy.png" class="w-20" alt="">
-			<p class="text-lg text-center"><span class="font-bold text-green-500">70% d'économies</span> sur votre facture d'énergie</p>
+			<p class="text-center sm:mx-5"><span class="font-bold text-green-500">70% d'économies</span> sur votre facture d'énergie.</p>
 		</div>
 		<div class="flex flex-col justify-center items-center bg-white p-5 shadow-md rounded-xl">
 			<img src="./gain_de_class.png" class="w-20" alt="">
-			<p class="text-lg text-center"><span class="font-bold text-green-500">Gain de classes énergétiques</span> sur votre DPE</p>
+			<p class="text-center sm:mx-5"><span class="font-bold text-green-500">Gain de classes énergétiques</span> sur votre DPE.</p>
 		</div>
 		<div class="flex flex-col justify-center items-center bg-white p-5 shadow-md rounded-xl">
 			<img src="./sans_avance.png" class="w-20" alt="">
-			<p class="text-lg text-center"><span class="font-bold text-green-500">Pas d'avance</span> de frais à faire sur vos travaux</p>
+			<p class="text-center sm:mx-5"><span class="font-bold text-green-500">Pas d'avance</span> de frais à faire sur vos travaux.</p>
 		</div>
 		<div class="flex flex-col justify-center items-center bg-white p-5 shadow-md rounded-xl">
 			<img src="./sans_impcat.png" class="w-20" alt="">
-			<p class="text-lg text-center"><span class="font-bold text-green-500">Travaux sans impact</span> sur votre vie quotidienne</p>
+			<p class="text-center sm:mx-5"><span class="font-bold text-green-500">Travaux sans impact</span> sur votre vie quotidienne.</p>
 		</div>
 	</div>
 </div>

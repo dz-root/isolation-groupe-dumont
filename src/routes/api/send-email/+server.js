@@ -22,9 +22,9 @@ export async function POST({ request }) {
     from: `"ISOLATION - GROUPE DUMONT" <${process.env.SMTP_USER}>`,
     to: 'contact@groupedumont.fr',
     cc: 'subvention@groupedumont.fr',
-    subject: `Nouveau lead ${data.informations.prenom} ${data.informations.nom}`,
+    subject: `[ISOLATION] Nouveau lead ${data.informations.prenom} ${data.informations.nom}`,
     html: `
-      <h2>Nouveau lead reçu</h2>
+      <h2>Nouvelle demande d'isolation  </h2>
 
       <table style="border-collapse: collapse; width: 100%; max-width: 600px;">
         <tr>
