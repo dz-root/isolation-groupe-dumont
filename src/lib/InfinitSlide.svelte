@@ -66,7 +66,6 @@
     .scroll div span {
         display: inline-flex;
         margin: 10px;
-        letter-spacing: 0.2em;
         background: rgba(255, 255, 255, 0.10);
         color: #fff;
         padding: 5px 10px;
@@ -74,11 +73,7 @@
         transition: 0.5s;
     }
     
-    .scroll div span:hover {
-        color:#333;
-        background: #FFF;
-        cursor: pointer;
-    }
+
     
     .imgBox div {
         display: flex;

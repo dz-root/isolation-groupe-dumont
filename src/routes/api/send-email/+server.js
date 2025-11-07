@@ -24,7 +24,7 @@ export async function POST({ request }) {
     cc: 'subvention@groupedumont.fr',
     subject: `[ISOLATION] Nouveau lead ${data.informations.prenom} ${data.informations.nom}`,
     html: `
-      <h2>Nouvelle demande d'isolation  </h2>
+      <h2>Nouvelle demande d'isolation</h2>
 
       <table style="border-collapse: collapse; width: 100%; max-width: 600px;">
         <tr>
@@ -76,7 +76,7 @@ export async function POST({ request }) {
       </table>
 
       <br />
-      <p style="font-size: 12px; color: #777;">Email envoyé automatiquement depuis le site.</p>
+      <p style="font-size: 12px; color: #777;">Email envoyé automatiquement depuis le site <a href="https://isolation.groupedumont.fr/">https://isolation.groupedumont.fr/</a>.</p>
     `
   };
 
