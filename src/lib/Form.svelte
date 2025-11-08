@@ -1,6 +1,6 @@
 <script>
 	import { writable } from 'svelte/store';
-	import {fade} from 'svelte/transition';
+	import {fade, slide} from 'svelte/transition';
 	const currentStep = writable(1);
 	const formData = writable({
 	  habitation: null,
@@ -100,21 +100,22 @@
 	})();
 
 	const submitForm = async () => {
+ 
 		try {
-		isLoading.set(false);
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify($formData),
-      });
+            isLoading.set(false);
+            const response = await fetch('/api/send-email', {
+                method: 'POST',
+                headers: {
+                'Content-Type': 'application/json',
+                },
+                body: JSON.stringify($formData),
+            });
 
-      if (response.ok) {
-		  currentStep.set(9)
-      } else {
-        alert('Une erreur est survenue lors de l’envoi du formulaire.');
-      }
+            if (response.ok) {
+                currentStep.set(9)
+            } else {
+                alert('Une erreur est survenue lors de l’envoi du formulaire.');
+            }
     } catch (err) {
       console.error('Erreur lors de la soumission du formulaire :', err);
       alert('Impossible de soumettre le formulaire. Veuillez réessayer.');
@@ -132,9 +133,9 @@
     <div class="{$currentStep >= 8 ? 'bg-green-500' :'bg-gray-100'} py-0.5 transition-ease-in-out transition-colors duration-300"></div>
     
 </div>
-<form on:submit|preventDefault={() => console.log($formData)} class="flex flex-col items-center justify-center min-h-[400px]">
+<form on:submit|preventDefault={() => console.log($formData)} class="flex flex-col items-center justify-center h-full py-5 lg:py-0">
     {#if $currentStep === 1}
-        <p class="font-medium mb-2">Habitez vous :</p>
+        <p class="font-medium mb-2">Type d'habitation :</p>
         <ul class="grid w-full gap-3 md:grid-cols-2">
             <li>
                 <input type="radio" id="hosting-small" name="habitation" value="Maison" bind:group={$formData.habitation} class="hidden peer" />
@@ -166,7 +167,7 @@
     {/if}
 
     {#if $currentStep === 2}
-        <div class="w-full" transition:fade>
+        <div class="w-full" transition:slide>
         <p class="font-medium mb-2">Vous habitez <span class="text-green-500">un{#if $formData.habitation ==="Maison"}e{/if} {$formData.habitation}</span> et vous êtes?</p>
         <ul class="grid w-full gap-3 md:grid-cols-2">
 
@@ -202,7 +203,7 @@
 
     {#if $currentStep === 3}
         <!-- Étape 3 : Code postal -->
-        <div class="w-full flex flex-col" transition:fade>
+        <div class="w-full flex flex-col" transition:slide>
             <p class="font-medium mb-2">Vous habitez <span class="text-green-500">un{#if $formData.habitation ==="Maison"}e{/if} {$formData.habitation}</span>, vous êtes <span class="text-green-500">{$formData.statut}</span>.</p>
             <label>Quel est votre Code postal?</label>
             <input type="number" class="input border px-5 py-1.5" bind:value={$formData.codePostal} placeholder="75000"/>
@@ -211,7 +212,7 @@
 
     {#if $currentStep === 4}
         <!-- Étape 4 : Travaux -->
-        <div class="w-full" transition:fade>
+        <div class="w-full" transition:slide>
             <p class="font-medium mb-2">Dites nous quels travaux vous intéressent ?</p>
             <p class="italic text-sm">Un ou plusieurs choix possibles</p>
             <ul class="w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg">
@@ -255,7 +256,7 @@
 
     {#if $currentStep === 5}
         <!-- Étape 5 : Chauffage -->
-        <div class="w-full" transition:fade>
+        <div class="w-full" transition:slide>
             <p class="font-medium mb-2">Comment êtes-vous chauffés actuellement ? </p>
             <ul class="w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg">
                 <li class="w-full border-b border-gray-200 rounded-t-lg hover:bg-gray-100">
@@ -290,7 +291,7 @@
 
     {#if $currentStep === 6}
         <!-- Étape 6 : Foyer -->
-        <div class="w-full">
+        <div class="w-full"  transition:slide>
             <p class="font-medium mb-2">De combien personnes se compose votre foyer?</p>
             <ul class="w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg">
                 <li class="w-full border-b border-gray-200 rounded-t-lg hover:bg-gray-100">
@@ -357,7 +358,7 @@
 
     {#if $currentStep === 8}
         <!-- Étape 8 : Informations personnelles -->
-        <div class="w-full flex flex-col">
+        <div class="w-full flex flex-col"  transition:slide>
             <label>Nom et prénom</label>
             <div class="w-full flex flex-col md:flex-row gap-2 mb-2">
                 <div class="relative">
@@ -401,6 +402,10 @@
 
 
         </div>
+        <p class="text-xs text-center mt-5 text-gray-500">
+            En soumettant votre demande, vous acceptez que Groupe Dumont vous contactent et utilisent les données recueillies afin de vous proposer une offre adaptée à vos besoins. Pour en savoir plus sur la gestion de vos données personnelles et pour exercer vos droits, veuillez consulter notre 
+            <a href="https://groupedumont.fr/politique-de-confidentialite/" class="text-green-500">Politique de Confidentialité*</a>
+        </p>
     {/if}
 
     {#if $currentStep === 9}

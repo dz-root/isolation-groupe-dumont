@@ -16,10 +16,10 @@
 			<h1 class="text-center lg:text-left text-3xl md:text-4xl xl:text-6xl font-extrabold">
 				Profitez des <span class="text-green-500 italic">Aides de l'Etat</span> pour vos Travaux d'isolation
 			</h1>
-			<p class="text-center lg:text-left text-lg sm:text-xl">Savez-vous qu'en isolant entièrement votre maison, vous pouvez réaliser jusqu'à <span class="font-bold underline decoration-green-500 decoration-4 underline-offset-4">70% d'économies </span> d'énergie ?</p>
 			<div class="flex justify-end">
-				<img src="arrow.png" alt="" class="hidden lg:block w-[80px] -mt-10 -mr-10 z-10">
+				<img src="arrow.png" alt="" class="hidden lg:block w-[50px] h-[50] -mr-8 -mt-10 z-10">
 			</div>
+			<p class="text-center lg:text-left text-lg sm:text-xl">Savez-vous qu'en isolant entièrement votre maison, vous pouvez réaliser jusqu'à <span class="font-bold underline decoration-green-500 decoration-4 underline-offset-4">70% d'économies </span> d'énergie ?</p>
 			<div class="flex flex-col items-center sm:items-start gap-1">
 				<p class="text-xs">Votre DPE améliorer</p>
 				<div class="flex items-center justify-center sm:justify-start gap-1 mb-5">
@@ -39,10 +39,16 @@
 			<img src="./rge.png" class ="w-12 sm:w-16 -mt-12 -ml-4 sm:ml-0" alt="Norme RGE">
 			<h3 class=" text-gray-700 text-center text-sm">Testez votre éligibilité en <span class="font-bold">⏱️30 secondes</span></h3>
 			<Form></Form>
-			<p class="text-xs text-center mt-5 text-gray-500">
-				En soumettant votre demande, vous acceptez que Groupe Dumont vous contactent et utilisent les données recueillies afin de vous proposer une offre adaptée à vos besoins. Pour en savoir plus sur la gestion de vos données personnelles et pour exercer vos droits, veuillez consulter notre 
-				<a href="https://groupedumont.fr/politique-de-confidentialite/" class="text-green-500">Politique de Confidentialité*</a>
-			</p>
+
+		</div>
+		<div class="w-full flex flex-col justify-center gap-1 sm:hidden">
+			<span class="text-xs">Ou appelez nous au:</span>
+			<a href="tel:+33782376522" class="flex items-center justify-center gap-5 w-full text-green-500 bg-white px-5 py-2.5  border border-green-500 rounded-md uppercase text-sm font-bold shadow-xl">
+				<svg class="w-4" data-slot="icon" fill="currentColor" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M20.25 3.75v4.5m0-4.5h-4.5m4.5 0-6 6m3 12c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 0 1 4.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 0 0-.38 1.21 12.035 12.035 0 0 0 7.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 0 1 1.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 0 1-2.25 2.25h-2.25Z"></path>
+				</svg>
+				07.82.37.65.22
+			</a>
 		</div>
 	</div>
 </div>
@@ -63,17 +69,26 @@
 				Le groupe Dumont vous accompagne dans tous vos projets de rénovation et travaux d’ampleur en vous permettant de bénéficier des aides de l’État, <strong>jusqu’à 80% de financement</strong>. Spécialisés dans la gestion des démarches administratives et techniques, nous simplifions votre accès aux subventions telles que MonProjet Anah, les Certificats d’Économie d’Énergie (CEE) ou encore l’éco-prêt à taux zéro.			<p class="mb-5">
 			</p>
 			<p class="mb-10">Notre équipe prend en charge chaque étape de votre projet : analyse de votre éligibilité, constitution des dossiers, suivi des travaux avec des professionnels certifiés RGE, et obtention des financements adaptés. 	</p>
-			<div class="flex">
+			<div class="flex gap-5">
 				<a href="#test-elegibilite" type="button" class="flex items-center gap-3 bg-white shadow-lg text-green-500 border  border-green-500 px-5 py-1.5 rounded-full hover:bg-green-600 hover:text-white transition ease-in-out font-bold">
 					<span class="relative flex h-3 w-3">
 						<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
 						<span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
 					</span>
-					Tester mon éligibilité
+					Tester votre éligibilité
 					<svg class="w-6" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
 						<path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
 					</svg>
 				</a>
+				<div class="lg:flex flex-col justify-center hidden">
+					<span class="text-xs text-gray-600">Ou appelez nous au:</span>
+					<a href="tel:+33782376522" class="flex items-center justify-center gap-2 text-green-500 font-bold text-sm">
+						<svg class="w-3.5" data-slot="icon" fill="currentColor" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M20.25 3.75v4.5m0-4.5h-4.5m4.5 0-6 6m3 12c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 0 1 4.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 0 0-.38 1.21 12.035 12.035 0 0 0 7.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 0 1 1.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 0 1-2.25 2.25h-2.25Z"></path>
+						</svg>
+						07.82.37.65.22
+					</a>
+				</div>
 			</div>
 		</div>
 
@@ -131,7 +146,7 @@
 </div>
 
 
-<div class="w-full flex items-center justify-center py-20 object-cover bg-fixed" style="background-image: url(./bg-dumont.png);">
+<div class="w-full flex items-center justify-center py-20 object-cover bg-fixed border-t border-green-300" style="background-image: url(./bg-dumont.png);">
 	<div class="w-full sm:w-11/12 xl:w-10/12 2xl:w-7/12 flex flex-col items-center justify-center">
 		<h2 class="text-4xl text-center font-bold mb-2 p-3">Prêt à passer à l'isolation votre maison ?</h2>
 		
@@ -180,8 +195,15 @@
 		</div>
 	</div>
 </div>
-<div class="w-full flex items-center justify-center p-3 sm:hidden">
+<div class="w-full flex flex-col justify-center gap-1 p-3 sm:hidden">
 	<a href="#test-elegibilite" class="flex items-center justify-center w-full bg-green-500 text-white px-5 py-2.5 rounded-md uppercase text-sm font-bold shadow-xl">testez votre éligibilité gratuitement</a>
+	<span class="text-xs">Ou appelez nous au:</span>
+	<a href="tel:+33782376522" class="flex items-center justify-center gap-5 w-full bg-green-500 text-white px-5 py-2.5 rounded-md uppercase text-sm font-bold shadow-xl">
+		<svg class="w-4" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+			<path stroke-linecap="round" stroke-linejoin="round" d="M20.25 3.75v4.5m0-4.5h-4.5m4.5 0-6 6m3 12c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 0 1 4.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 0 0-.38 1.21 12.035 12.035 0 0 0 7.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 0 1 1.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 0 1-2.25 2.25h-2.25Z"></path>
+		</svg>
+		07.82.37.65.22
+	</a>
 </div>
 
 <Footer></Footer>
