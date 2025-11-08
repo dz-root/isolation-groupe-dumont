@@ -2,19 +2,31 @@
 	<div class="font-bold">
 
 		<span>Isolation par l’extérieur</span>
+        <span>Aides ITE 2025</span>
 		<span>Isolation par l’intérieur</span>
+        <span>Financement ITE</span>
 		<span>Isolation des combles</span>
+        <span>CEE isolation par l’extérieur</span>
 		<span>Isolation des rampants</span>
+        <span>Ponts thermiques</span>
 		<span>Isolation des planchers</span>
+        <span>isolation polystyrène graphité</span>
+        <span>Isolant façade laine de roche</span>
 
 	</div>
 	<div class="font-bold">
 
 		<span>Isolation par l’extérieur</span>
+        <span>Aides ITE 2025</span>
 		<span>Isolation par l’intérieur</span>
+        <span>Financement ITE</span>
 		<span>Isolation des combles</span>
+        <span>CEE isolation par l’extérieur</span>
 		<span>Isolation des rampants</span>
+        <span>Ponts thermiques</span>
 		<span>Isolation des planchers</span>
+        <span>isolation polystyrène graphité</span>
+        <span>Isolant façade laine de roche</span>
 
 	</div>	
 </div>

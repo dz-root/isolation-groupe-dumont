@@ -121,6 +121,17 @@
     }
   };
 </script>
+<div class="grid grid-cols-8 mt-2">
+    <div class="bg-green-500 py-0.5"></div>
+    <div class="{$currentStep >= 2 ? 'bg-green-500' :'bg-gray-100'} py-0.5 transition-ease-in-out transition-colors duration-300"></div>
+    <div class="{$currentStep >= 3 ? 'bg-green-500' :'bg-gray-100'} py-0.5 transition-ease-in-out transition-colors duration-300"></div>
+    <div class="{$currentStep >= 4 ? 'bg-green-500' :'bg-gray-100'} py-0.5 transition-ease-in-out transition-colors duration-300"></div>
+    <div class="{$currentStep >= 5 ? 'bg-green-500' :'bg-gray-100'} py-0.5 transition-ease-in-out transition-colors duration-300"></div>
+    <div class="{$currentStep >= 6 ? 'bg-green-500' :'bg-gray-100'} py-0.5 transition-ease-in-out transition-colors duration-300"></div>
+    <div class="{$currentStep >= 7 ? 'bg-green-500' :'bg-gray-100'} py-0.5 transition-ease-in-out transition-colors duration-300"></div>
+    <div class="{$currentStep >= 8 ? 'bg-green-500' :'bg-gray-100'} py-0.5 transition-ease-in-out transition-colors duration-300"></div>
+    
+</div>
 <form on:submit|preventDefault={() => console.log($formData)} class="flex flex-col items-center justify-center min-h-[400px]">
     {#if $currentStep === 1}
         <p class="font-medium mb-2">Habitez vous :</p>
@@ -205,31 +216,31 @@
             <p class="italic text-sm">Un ou plusieurs choix possibles</p>
             <ul class="w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg">
 
-                    <li class="w-full border-b border-gray-200 rounded-t-lg ">
+                    <li class="w-full border-b border-gray-200 rounded-t-lg hover:bg-gray-100">
                         <div class="flex items-center ps-3">
                             <input id="iso-ext" type="checkbox" value="Isolation par l’extérieur (crépi inclus)" bind:group={$formData.travaux} class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 rounded focus:ring-green-500 focus:ring-2">
                             <label for="iso-ext" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 ">Isolation par l’extérieur (crépi inclus)</label>
                         </div>
                     </li>
-                    <li class="w-full border-b border-gray-200 rounded-t-lg ">
+                    <li class="w-full border-b border-gray-200 rounded-t-lg hover:bg-gray-100">
                         <div class="flex items-center ps-3">
                             <input id="iso-int" type="checkbox" value="Isolation par l’intérieur" bind:group={$formData.travaux} class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 rounded focus:ring-green-500 focus:ring-2">
                             <label for="iso-int" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 ">Isolation par l’intérieur</label>
                         </div>
                     </li>
-                    <li class="w-full border-b border-gray-200 rounded-t-lg ">
+                    <li class="w-full border-b border-gray-200 rounded-t-lg hover:bg-gray-100">
                         <div class="flex items-center ps-3">
                             <input id="iso-comble" type="checkbox" value="Isolation des combles perdues" bind:group={$formData.travaux} class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 rounded focus:ring-green-500 focus:ring-2">
                             <label for="iso-comble" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 ">Isolation des combles perdues</label>
                         </div>
                     </li>
-                    <li class="w-full border-b border-gray-200 rounded-t-lg ">
+                    <li class="w-full border-b border-gray-200 rounded-t-lg hover:bg-gray-100">
                         <div class="flex items-center ps-3">
                             <input id="iso-ramp" type="checkbox" value="Isolation des rampants" bind:group={$formData.travaux} class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 rounded focus:ring-green-500 focus:ring-2">
                             <label for="iso-ramp" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 ">Isolation des rampants</label>
                         </div>
                     </li>
-                    <li class="w-full border-b border-gray-200 rounded-t-lg ">
+                    <li class="w-full border-b border-gray-200 rounded-t-lg hover:bg-gray-100">
                         <div class="flex items-center ps-3">
                             <input id="iso-planchers" type="checkbox" value="Isolation des planchers bas" bind:group={$formData.travaux} class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 rounded focus:ring-green-500 focus:ring-2">
                             <label for="iso-planchers" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 ">Isolation des planchers bas</label>
@@ -246,22 +257,34 @@
         <!-- Étape 5 : Chauffage -->
         <div class="w-full" transition:fade>
             <p class="font-medium mb-2">Comment êtes-vous chauffés actuellement ? </p>
-        <label class="block">
-            <input type="radio" name="chauffage" value="Gaz" bind:group={$formData.chauffage} />
-            Gaz
-        </label>
-        <label class="block">
-            <input type="radio" name="chauffage" value="Électricité" bind:group={$formData.chauffage} />
-            Électricité
-        </label>
-        <label class="block">
-            <input type="radio" name="chauffage" value="Fioul" bind:group={$formData.chauffage} />
-            Fioul
-        </label>
-        <label class="block">
-            <input type="radio" name="chauffage" value="Autres" bind:group={$formData.chauffage} />
-            Autres
-        </label>
+            <ul class="w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg">
+                <li class="w-full border-b border-gray-200 rounded-t-lg hover:bg-gray-100">
+                    <label class="block p-3">
+                        <input type="radio" name="chauffage" value="Gaz" bind:group={$formData.chauffage} />
+                        Gaz
+                    </label>
+                </li>
+                <li class="w-full border-b border-gray-200 rounded-t-lg hover:bg-gray-100">
+                    <label class="block p-3">
+                        <input type="radio" name="chauffage" value="Électricité" bind:group={$formData.chauffage} />
+                        Électricité
+                    </label>
+                </li>
+                <li class="w-full border-b border-gray-200 rounded-t-lg hover:bg-gray-100">
+                    <label class="block p-3">
+                        <input type="radio" name="chauffage" value="Fioul" bind:group={$formData.chauffage} />
+                        Fioul
+                    </label>
+                </li>
+                <li class="w-full border-b border-gray-200 rounded-t-lg hover:bg-gray-100">
+                    <label class="block p-3">
+                        <input type="radio" name="chauffage" value="Autres" bind:group={$formData.chauffage} />
+                        Autres
+                    </label>
+                </li>
+            </ul>
+
+
         </div>
     {/if}
 
@@ -269,35 +292,48 @@
         <!-- Étape 6 : Foyer -->
         <div class="w-full">
             <p class="font-medium mb-2">De combien personnes se compose votre foyer?</p>
-        <label class="block">
-            <input type="radio" name="foyer" value="1" bind:group={$formData.foyer} />
-            1 personne
-        </label>
-        <label class="block">
-            <input type="radio" name="foyer" value="2" bind:group={$formData.foyer} />
-            2 personnes
-        </label>
-        <label class="block">
-            <input type="radio" name="foyer" value="3" bind:group={$formData.foyer} />
-            3 personnes
-        </label>
-        <label class="block">
-            <input type="radio" name="foyer" value="4" bind:group={$formData.foyer} />
-            4 personnes
-        </label>
-        <label class="block">
-            <input type="radio" name="foyer" value="5" bind:group={$formData.foyer} />
-            5 personnes
-        </label>
-        <label class="block">
-            <input type="radio" name="foyer" value="6+" bind:group={$formData.foyer} />
-            6 et plus
-        </label>
+            <ul class="w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg">
+                <li class="w-full border-b border-gray-200 rounded-t-lg hover:bg-gray-100">
+                    <label class="block p-2.5">
+                        <input type="radio" name="foyer" value="1" bind:group={$formData.foyer} />
+                        1 personne
+                    </label>
+                </li>
+                <li class="w-full border-b border-gray-200 rounded-t-lg hover:bg-gray-100">
+                    <label class="block p-2.5">
+                        <input type="radio" name="foyer" value="2" bind:group={$formData.foyer} />
+                        2 personnes
+                    </label>
+                </li>
+                <li class="w-full border-b border-gray-200 rounded-t-lg hover:bg-gray-100">
+                    <label class="block p-2.5">
+                        <input type="radio" name="foyer" value="3" bind:group={$formData.foyer} />
+                        3 personnes
+                    </label>
+                </li>
+                <li class="w-full border-b border-gray-200 rounded-t-lg hover:bg-gray-100">
+                    <label class="block p-2.5">
+                        <input type="radio" name="foyer" value="4" bind:group={$formData.foyer} />
+                        4 personnes
+                    </label>
+                </li>
+                <li class="w-full border-b border-gray-200 rounded-t-lg hover:bg-gray-100">
+                    <label class="block p-2.5">
+                        <input type="radio" name="foyer" value="5" bind:group={$formData.foyer} />
+                        5 personnes
+                    </label>
+                </li>
+                <li class="w-full border-b border-gray-200 rounded-t-lg hover:bg-gray-100">
+                    <label class="block p-2.5">
+                        <input type="radio" name="foyer" value="6+" bind:group={$formData.foyer} />
+                        6 et plus
+                    </label>
+                </li>
+            </ul>
         </div>
     {/if}
 
     {#if $currentStep === 7}
-    
         <p class="font-medium mb-2">Votre revenu fiscal de référence ?</p>
         <!-- Étape 7 : Revenus -->
         

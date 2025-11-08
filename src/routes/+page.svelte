@@ -125,7 +125,7 @@
 			</li>
 		</ol>
 		<div class="order-first mb-5 md:order-last">
-			<img src="https://www.qualitel.org/particuliers/uploads/DPE-A.jpg" alt="" class="rounded-lg">
+			<img src="./DPE-A.jpg" alt="" class="rounded-lg">
 		</div>
 	</div>	
 </div>
@@ -154,27 +154,27 @@
 <div class="w-full flex flex-col items-center justify-center bg-gray-50 py-20 gap-5 p-5">
 	<h2 class="text-2xl font-bold mb-5 text-center">Les principaux avantage de l'isolation par l'extérieur</h2>
 	<div class="w-full sm:w-11/12 xl:w-10/12 2xl:w-7/12 grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-10">
-		<div class="flex flex-col justify-center items-center bg-white p-5 shadow-md rounded-xl">
+		<div class="flex flex-col justify-center items-center bg-white p-5 shadow-md rounded-xl border">
 			<img src="./aides.png" class="w-16" alt="">
 			<p class="text-xs sm:text-base text-center sm:mx-5"><span class="font-bold text-green-500">Jusqu'a 80%</span> financer par les aides de l'Etat.</p>
 		</div>
-		<div class="flex flex-col justify-center items-center bg-white p-5 shadow-md rounded-xl">
+		<div class="flex flex-col justify-center items-center bg-white p-5 shadow-md rounded-xl border">
 			<img src="./valorisation.png" class="w-16" alt="">
 			<p class="text-xs sm:text-base text-center sm:mx-5"><span class="font-bold text-green-500">Valorisation</span> de votre logement. <span class="font-bold text-green-500">de 15 à 25%</span></p>
 		</div>
-		<div class="flex flex-col justify-center items-center bg-white p-5 shadow-md rounded-xl">
+		<div class="flex flex-col justify-center items-center bg-white p-5 shadow-md rounded-xl border">
 			<img src="./economy.png" class="w-16" alt="">
 			<p class="text-xs sm:text-base text-center sm:mx-5"><span class="font-bold text-green-500">70% d'économies</span> sur votre facture d'énergie.</p>
 		</div>
-		<div class="flex flex-col justify-center items-center bg-white p-5 shadow-md rounded-xl">
+		<div class="flex flex-col justify-center items-center bg-white p-5 shadow-md rounded-xl border">
 			<img src="./gain_de_class.png" class="w-16" alt="">
 			<p class="text-xs sm:text-base text-center sm:mx-5"><span class="font-bold text-green-500">Gain de classes énergétiques</span> sur votre DPE.</p>
 		</div>
-		<div class="flex flex-col justify-center items-center bg-white p-5 shadow-md rounded-xl">
+		<div class="flex flex-col justify-center items-center bg-white p-5 shadow-md rounded-xl border">
 			<img src="./sans_avance.png" class="w-16" alt="">
 			<p class="text-xs sm:text-base text-center sm:mx-5"><span class="font-bold text-green-500">Pas d'avance</span> de frais à faire sur vos travaux.</p>
 		</div>
-		<div class="flex flex-col justify-center items-center bg-white p-5 shadow-md rounded-xl">
+		<div class="flex flex-col justify-center items-center bg-white p-5 shadow-md rounded-xl border">
 			<img src="./sans_impcat.png" class="w-16" alt="">
 			<p class="text-xs sm:text-base text-center sm:mx-5"><span class="font-bold text-green-500">Travaux sans impact</span> sur votre vie quotidienne.</p>
 		</div>
