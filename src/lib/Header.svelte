@@ -7,6 +7,8 @@
 		<img src="./anha.png" alt="Mon Projet Anah" class="max-w-[150px] object-contain">
 	</div>
 </div>
-<a href="https://groupedumont.fr/" class="flex items-center justify-center lg:hidden ml-10 mt-10">
-    <img src="./groupedumont.png" alt="Groupe Dumont" class="max-w-[180px]">
-</a>
+<div class="bg-gray-100 pt-10 lg:hidden">
+	<a href="https://groupedumont.fr/" class="flex items-center justify-center  ml-10 ">
+		<img src="./groupedumont.png" alt="Groupe Dumont" class="max-w-[180px]">
+	</a>
+</div>

@@ -8,12 +8,12 @@
 </script>
 
 
-<div class="flex w-full bg-gray-50 items-center justify-center pb-10 lg:py-10" >
+<div class="flex w-full bg-gray-100 items-center justify-center pb-10 lg:py-10">
 
 	<div class="w-full sm:w-11/12 xl:w-10/12 2xl:w-7/12 grid grid-cols-1 lg:grid-cols-2 p-5 gap-3">
 		<div class="flex flex-col gap-5">
 			<TexxtSlider></TexxtSlider>
-			<h1 class="text-center lg:text-left text-3xl md:text-4xl xl:text-6xl font-extrabold">
+			<h1 class="text-center lg:text-left text-3xl md:text-4xl xl:text-5xl font-extrabold">
 				Profitez des <span class="text-green-500 italic">Aides de l'Etat</span> pour vos Travaux d'isolation
 			</h1>
 			<div class="flex justify-end">
@@ -35,8 +35,8 @@
 				</div>
 			</div>
 		</div>
-		<div class="w-full bg-white p-5 border-2 border-green-500 shadow-xl rounded-lg" id="test-elegibilite">
-			<img src="./rge.png" class ="w-12 sm:w-16 -mt-12 -ml-4 sm:ml-0" alt="Norme RGE">
+		<div class="w-full bg-white p-5 border-2 border-green-500 shadow-xl rounded-lg" >
+			<img src="./rge.png" class ="w-12 sm:w-16 -mt-12 -ml-4 sm:ml-0" alt="Norme RGE" id="test-elegibilite">
 			<h3 class=" text-gray-700 text-center text-sm">Testez votre éligibilité en <span class="font-bold">⏱️30 secondes</span></h3>
 			<Form></Form>
 
@@ -55,7 +55,7 @@
 
 <InfinitSlide></InfinitSlide>
 
-<div class="w-full flex items-center justify-center bg-green-100 py-10">
+<div class="w-full flex items-center justify-center bg-green-100 py-20">
 	<div class="w-full sm:w-11/12 xl:w-10/12 2xl:w-7/12 grid grid-cols-1 lg:grid-cols-2 p-5 gap-5">
 		<div class="">
 			<div class="">
@@ -68,7 +68,7 @@
 			<p class="text-sm">
 				Le groupe Dumont vous accompagne dans tous vos projets de rénovation et travaux d’ampleur en vous permettant de bénéficier des aides de l’État, <strong>jusqu’à 80% de financement</strong>. Spécialisés dans la gestion des démarches administratives et techniques, nous simplifions votre accès aux subventions telles que MonProjet Anah, les Certificats d’Économie d’Énergie (CEE) ou encore l’éco-prêt à taux zéro.			<p class="mb-5">
 			</p>
-			<p class="mb-10">Notre équipe prend en charge chaque étape de votre projet : analyse de votre éligibilité, constitution des dossiers, suivi des travaux avec des professionnels certifiés RGE, et obtention des financements adaptés. 	</p>
+			<p class="mb-10 text-sm">Notre équipe prend en charge chaque étape de votre projet : analyse de votre éligibilité, constitution des dossiers, suivi des travaux avec des professionnels certifiés RGE, et obtention des financements adaptés. 	</p>
 			<div class="flex gap-5">
 				<a href="#test-elegibilite" type="button" class="flex items-center gap-3 bg-white shadow-lg text-green-500 border  border-green-500 px-5 py-1.5 rounded-full hover:bg-green-600 hover:text-white transition ease-in-out font-bold">
 					<span class="relative flex h-3 w-3">
@@ -95,9 +95,9 @@
 	</div>
 </div>
 
-<div class="w-full flex flex-col bg-gray-50 items-center justify-center py-10">
+<div class="w-full flex flex-col bg-gray-50 items-center justify-center py-20">
 	<div class="flex items-start sm:items-center">
-		<img src="https://d9hhrg4mnvzow.cloudfront.net/isolation-exterieure.mes-aides-energie.fr/isolation-1/10925316-shutterstock-1865759740-removebg-preview_101o01o000000000000028.png" class="w-14" alt="">
+		<img src="./10925316-shutterstock-1865759740-removebg-preview_101o01o000000000000028.png" class="w-14" alt="">
 		<h2 class="text-xl sm:text-2xl font-bold">Vos travaux d'isolation en <span class="underline decoration-green-500 decoration-4 underline-offset-4">4 étapes</span> simples</h2>
 	</div>
 	<div class="w-full sm:w-11/12 xl:w-10/12 2xl:w-7/12 grid grid-cols-1 md:grid-cols-2 p-8 gap-3">
@@ -143,13 +143,25 @@
 			<img src="./DPE-A.jpg" alt="" class="rounded-lg">
 		</div>
 	</div>	
+
+	<div class=" w-full sm:w-11/12 xl:w-10/12 2xl:w-7/12 px-5">
+
+		<video
+		class="video-js vjs-theme-city rounded-lg border"
+		controls
+		preload="auto"
+		poster="./video_cover.png">
+			<source src="20251109_1605_01k9mj1wvge9t9q83qx2d5gmhj.mp4" type="video/mp4" />
+		</video>
+	</div>
+
 </div>
 
 
 <div class="w-full flex items-center justify-center py-20 object-cover bg-fixed border-t border-green-300" style="background-image: url(./bg-dumont.png);">
 	<div class="w-full sm:w-11/12 xl:w-10/12 2xl:w-7/12 flex flex-col items-center justify-center">
-		<h2 class="text-4xl text-center font-bold mb-2 p-3">Prêt à passer à l'isolation votre maison ?</h2>
-		
+		<h2 class="text-4xl text-center font-bold  p-3">Prêt à passer à l'isolation votre maison ?</h2>
+			<p class="max-w-[800px] text-center text-sm p-5">Vos travaux peuvent être <strong>financés jusqu’à 80%</strong> grâce aux aides de l’État, et sont réalisés exclusivement par des <strong>artisans certifiés RGE</strong>. Profitez d’un accompagnement complet du diagnostic à la réalisation des travaux.</p>
 			<a href="#test-elegibilite" type="button" class="flex items-center gap-3 bg-white shadow-lg text-green-500 border  border-green-500 px-5 py-1.5 rounded-full hover:bg-green-600 hover:text-white transition ease-in-out font-bold">
 				<span class="relative flex h-3 w-3">
 					<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
@@ -166,7 +178,7 @@
 
 <InfinitSlide></InfinitSlide>
 
-<div class="w-full flex flex-col items-center justify-center bg-gray-50 py-20 gap-5 p-5">
+<div class="w-full flex flex-col items-center justify-center bg-green-100 py-20 gap-5 p-5">
 	<h2 class="text-2xl font-bold mb-5 text-center">Les principaux avantage de l'isolation par l'extérieur</h2>
 	<div class="w-full sm:w-11/12 xl:w-10/12 2xl:w-7/12 grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-10">
 		<div class="flex flex-col justify-center items-center bg-white p-5 shadow-md rounded-xl border">

@@ -1,5 +1,5 @@
 <div class="scroll bg-green-500" style="--time:120s">
-	<div class="font-bold">
+	<div class="text-sm">
 
 		<span>Isolation par l’extérieur</span>
         <span>Aides ITE 2025</span>
@@ -14,7 +14,7 @@
         <span>Isolant façade laine de roche</span>
 
 	</div>
-	<div class="font-bold">
+	<div class="text-sm">
 
 		<span>Isolation par l’extérieur</span>
         <span>Aides ITE 2025</span>
