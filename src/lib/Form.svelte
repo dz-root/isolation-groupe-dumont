@@ -132,7 +132,7 @@
     <div class="{$currentStep >= 8 ? 'bg-green-500' :'bg-gray-100'} py-0.5 transition-ease-in-out transition-colors duration-300"></div>
     
 </div>
-<form on:submit|preventDefault={() =>  gtag('event', 'conversion', {'send_to': 'AW-17656917653/ABC123XYZ456','value': 1.0,'currency': 'EUR'}) } class="flex flex-col items-center justify-center h-full py-5 ">
+<form on:submit|preventDefault={() =>  gtag('event', 'conversion', {'send_to': 'AW-17656917653/4foTCPLQ1sMbEJXdvONB','value': 1.0,'currency': 'EUR'}) } class="flex flex-col items-center justify-center h-full py-5 ">
     {#if $currentStep === 1}
         <p class="text-sm font-medium mb-2">Votre type d'habitation :</p>
         <ul class="grid w-full gap-3 md:grid-cols-2">
