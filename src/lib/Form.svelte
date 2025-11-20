@@ -100,7 +100,6 @@
 	})();
 
 	const submitForm = async () => {
- 
 		try {
             isLoading.set(false);
             const response = await fetch('/api/send-email', {
@@ -116,11 +115,11 @@
             } else {
                 alert('Une erreur est survenue lors de l’envoi du formulaire.');
             }
-    } catch (err) {
-      console.error('Erreur lors de la soumission du formulaire :', err);
-      alert('Impossible de soumettre le formulaire. Veuillez réessayer.');
-    }
-  };
+        } catch (err) {
+            console.error('Erreur lors de la soumission du formulaire :', err);
+            alert('Impossible de soumettre le formulaire. Veuillez réessayer.');
+        }
+    };
 </script>
 <div class="grid grid-cols-8 mt-2">
     <div class="bg-green-500 py-0.5"></div>
@@ -133,7 +132,7 @@
     <div class="{$currentStep >= 8 ? 'bg-green-500' :'bg-gray-100'} py-0.5 transition-ease-in-out transition-colors duration-300"></div>
     
 </div>
-<form on:submit|preventDefault={() => console.log($formData)} class="flex flex-col items-center justify-center h-full py-5 ">
+<form on:submit|preventDefault={() =>  gtag('event', 'conversion', {'send_to': 'AW-17656917653/ABC123XYZ456','value': 1.0,'currency': 'EUR'}) } class="flex flex-col items-center justify-center h-full py-5 ">
     {#if $currentStep === 1}
         <p class="text-sm font-medium mb-2">Votre type d'habitation :</p>
         <ul class="grid w-full gap-3 md:grid-cols-2">

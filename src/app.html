@@ -31,11 +31,17 @@
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17656917653"></script>
 	<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-
-	gtag('config', 'AW-17656917653');
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17656917653');
+    
+    // Event snippet for Conversion
+    gtag('event', 'conversion', {
+      'send_to': 'AW-17656917653/ABC123XYZ456',
+      'value': 1.0,
+      'currency': 'EUR'
+    });
 	</script>
 
     <!-- Données structurées -->
