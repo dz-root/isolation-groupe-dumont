@@ -130,6 +130,8 @@
 
 			if (response.ok) {
 				currentStep.set(9);
+				// Conversion Google Ads
+				
 			} else {
 				alert("Une erreur est survenue lors de l’envoi du formulaire.");
 			}
@@ -152,12 +154,6 @@
 			return;
 		}
 
-		// Conversion Google Ads
-		gtag("event", "conversion", {
-			send_to: "AW-17656917653/4foTCPLQ1sMbEJXdvONB",
-			value: 1.0,
-			currency: "EUR",
-		});
 
 		await submitForm();
 	};
